@@ -1,13 +1,43 @@
 <div class="card employee-card">
-    <div class="card-header">
-        <h2 class="card-title">{{ name }}</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3>
+  <div class="card-header">
+    <h2 class="card-title">{{ name }}</h2>
+    <h3 class="card-title">
+      <i class="fas fa-user-graduate mr-2"></i>{{ role }}
+    </h3>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <li class="list-group-item">ID: {{ id }}</li>
+      <li class="list-group-item">
+        Email: <a href="mailto:{{ email }}">{{ email }}</a>
+      </li>
+      <li class="list-group-item">School: {{ school }}</li>
+    </ul>
+  </div>
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br />
+
+<div id="experiment">
+  <div class="cube">
+    <div class="topFace">
+      <div>
+        <h1>${data.name}</h1>
+        <h3>Intern</h3>
+        <h3>ID: ${data.id}</h3>
+      </div>
     </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item">ID: {{ id }}</li>
-            <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
-            <li class="list-group-item">School: {{ school }}</li>
-        </ul>
+    <div class="leftFace">
+      <h1>Email:</h1>
+      <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
     </div>
+    <div class="rightFace">
+      <h1>School:</h1>
+      <h3>
+        ${data.school}
+      </h3>
+    </div>
+  </div>
 </div>

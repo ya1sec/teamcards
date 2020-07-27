@@ -7,12 +7,55 @@ const fs = require("fs");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
+const writeFileAsync = util.promisify(fs.writeFile);
 
 const render = require("./lib/htmlRenderer");
 
+const questions = [
+  {
+    type: "input",
+    message: "What is your name?",
+    name: "name",
+  },
+  {
+    type: "input",
+    message: "Please enter your location",
+    name: "location",
+  },
+  {
+    type: "input",
+    message: "explain yaself",
+    name: "bio",
+  },
+  {
+    type: "input",
+    message: "LinkedIn link:",
+    name: "linkedin",
+  },
+  {
+    type: "input",
+    message: "GitHub link:",
+    name: "github",
+  },
+  {
+    type: "input",
+    message: "Vimeo link:",
+    name: "vimeo",
+  },
+];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+async function init() {
+  const response = await inquirer.prompt(questions);
+  const data = { ...response };
+  const html = render(data);
+
+  writeFileAsync("index.html", html);
+  console.log("success");
+}
+
+init();
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
