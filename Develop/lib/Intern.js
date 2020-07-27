@@ -1,5 +1,5 @@
 // TODO: Write code to define and export the Intern class.  HINT: This class should inherit from Employee.
-function Engineer(name, id, email, school) {
+function Intern(name, id, email, school) {
   this.name = name;
   this.id = id;
   this.email = email;
@@ -25,3 +25,5 @@ function Engineer(name, id, email, school) {
     return this.school;
   };
 }
+
+module.exports = Intern;
