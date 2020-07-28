@@ -100,8 +100,8 @@ async function nextMember() {
       );
       engineerArr.push(engineer);
       let htmlEngineer = render(engineerArr);
-      appendFileAsync("index.html", htmlEngineer);
-      console.log(engineerAnswers.name);
+      appendFileAsync("./output/team.html", htmlEngineer);
+      // console.log(engineerAnswers.name);
       nextMember();
       break;
     case "Intern":
@@ -115,7 +115,7 @@ async function nextMember() {
       );
       internArr.push(intern);
       let htmlIntern = render(internArr);
-      appendFileAsync("index.html", htmlIntern);
+      appendFileAsync("./output/team.html", htmlIntern);
       nextMember();
       break;
     case "No more employees to add":
@@ -143,10 +143,10 @@ async function init() {
       managerAnswers.officeNumber
     );
     managerArr.push(manager);
-    console.log(managerArr);
+    // console.log(managerArr);
     let html = render(managerArr);
-    appendFileAsync("index.html", html);
-    console.log("success");
+    appendFileAsync("./output/team.html", html);
+    // console.log("success");
 
     nextMember();
   } catch (err) {
