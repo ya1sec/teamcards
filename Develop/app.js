@@ -9,7 +9,7 @@ const util = require("util");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
-const writeFileAsync = util.promisify(fs.writeFile);
+const appendFileAsync = util.promisify(fs.appendFile);
 
 const render = require("./lib/htmlRenderer");
 
@@ -90,10 +90,33 @@ async function nextMember() {
   let newMember = await inquirer.prompt(nextTeamMember);
   switch (newMember.Next) {
     case "Software Engineer":
-      let engineerAnswers = IQ(engineerQuestions);
+      let engineerAnswers = await inquirer.prompt(engineerQuestions);
+      let engineerArr = [];
+      let engineer = new Engineer(
+        engineerAnswers.name,
+        engineerAnswers.id,
+        engineerAnswers.email,
+        engineerAnswers.github
+      );
+      engineerArr.push(engineer);
+      let htmlEngineer = render(engineerArr);
+      appendFileAsync("index.html", htmlEngineer);
+      console.log(engineerAnswers.name);
+      nextMember();
       break;
     case "Intern":
-      let internAnswers = IQ(internQuestions);
+      let internAnswers = await inquirer.prompt(internQuestions);
+      let internArr = [];
+      let intern = new Intern(
+        internAnswers.name,
+        internAnswers.id,
+        internAnswers.email,
+        internAnswers.school
+      );
+      internArr.push(intern);
+      let htmlIntern = render(internArr);
+      appendFileAsync("index.html", htmlIntern);
+      nextMember();
       break;
     case "No more employees to add":
     default:
@@ -101,25 +124,28 @@ async function nextMember() {
   }
 }
 
-async function IQ(questionType) {
-  let name = await inquirer.prompt(questionType);
-  // return name;
-  console.log(name);
-  nextMember();
-}
+// async function IQ(questionType) {
+//   let name = await inquirer.prompt(questionType);
+//   // return name;
+//   // console.log(name);
+//   nextMember();
+// }
 
 async function init() {
   try {
     let managerAnswers = await inquirer.prompt(managerQuestions);
-    let employees = new Manager(
+    let managerArr = [];
+
+    let manager = new Manager(
       managerAnswers.name,
       managerAnswers.id,
       managerAnswers.email,
       managerAnswers.officeNumber
     );
-    console.log(managerAnswers);
-    let html = render(employees);
-    writeFileAsync("index.html", html);
+    managerArr.push(manager);
+    console.log(managerArr);
+    let html = render(managerArr);
+    appendFileAsync("index.html", html);
     console.log("success");
 
     nextMember();

@@ -5,23 +5,23 @@ function Intern(name, id, email, school) {
   this.email = email;
   this.school = school;
   this.getName = () => {
-    console.log(this.name);
+    // console.log(this.name);
     return this.name;
   };
   this.getId = () => {
-    console.log(this.id);
+    // console.log(this.id);
     return this.id;
   };
   this.getEmail = () => {
-    console.log(this.email);
+    // console.log(this.email);
     return this.email;
   };
   this.getRole = () => {
-    console.log("Intern");
+    // console.log("Intern");
     return "Intern";
   };
   this.getSchool = () => {
-    console.log(this.school);
+    // console.log(this.school);
     return this.school;
   };
 }

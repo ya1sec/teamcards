@@ -5,23 +5,23 @@ function Engineer(name, id, email, github) {
   this.email = email;
   this.github = github;
   this.getName = () => {
-    console.log(this.name);
+    // console.log(this.name);
     return this.name;
   };
   this.getId = () => {
-    console.log(this.id);
+    // console.log(this.id);
     return this.id;
   };
   this.getEmail = () => {
-    console.log(this.email);
+    // console.log(this.email);
     return this.email;
   };
   this.getRole = () => {
-    console.log("Engineer");
+    // console.log("Engineer");
     return "Engineer";
   };
   this.getGithub = () => {
-    console.log(this.github);
+    // console.log(this.github);
     return this.github;
   };
 }

@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <style>
+      body {
+        font-family: Helvetica;
+      }
+
+      .cube {
+        position: absolute;
+        left: 50%;
+        /* top: 300px; */
+        margin-left: -200px;
+      }
+
+      .cube p {
+        line-height: 14px;
+        font-size: 12px;
+      }
+
+      .cube h2 {
+        font-weight: bold;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace div {
+        padding: 10px;
+        width: 180px;
+        height: 180px;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace {
+        position: absolute;
+      }
+
+      .leftFace {
+        -webkit-transform: skew(0deg, 30deg);
+        -moz-transform: skew(0deg, 30deg);
+        background-color: #ccc;
+      }
+
+      .rightFace {
+        -webkit-transform: skew(0deg, -30deg);
+        -moz-transform: skew(0deg, -30deg);
+        background-color: #ddd;
+        left: 200px;
+      }
+
+      .topFace div {
+        -webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+        -moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+        background-color: #eee;
+        font-size: 0.862em;
+      }
+
+      .topFace {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        top: -158px;
+        left: 100px;
+      }
+
+      .cube video {
+        left: -20px;
+        top: -20px;
+        position: relative;
+      }
+
+      .cube div.rightFace video {
+        left: -301px;
+        top: -35px;
+        opacity: 0.9;
+      }
+
+      .cube div.leftFace video {
+        opacity: 0.7;
+        top: -35px;
+        left: -100px;
+      }
+
+      .cube div.rightFace,
+      .cube div.leftFace {
+        overflow: hidden;
+      }
+
+      .cube div.topFace.video div {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 jumbotron mb-3 team-heading">
+          <h1 class="text-center">My Team</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="team-area col-12 d-flex justify-content-center">
+          <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">bobobo</h2>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: bo1bo1</li>
+            <li class="list-group-item">Email: <a href="mailto:bb">bb</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/" target="_blank" rel="noopener noreferrer"></a></li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    -------------------------
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Manager</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>Office Number:</h1>
+          <h2>
+            ${data.office}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Engineer</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>GitHub:</h1>
+          <h3>
+            ${data.github}
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Intern</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>School:</h1>
+          <h3>
+            ${data.school}
+          </h3>
+        </div>
+      </div>
+    </div>
+    --------------------
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <style>
+      body {
+        font-family: Helvetica;
+      }
+
+      .cube {
+        position: absolute;
+        left: 50%;
+        /* top: 300px; */
+        margin-left: -200px;
+      }
+
+      .cube p {
+        line-height: 14px;
+        font-size: 12px;
+      }
+
+      .cube h2 {
+        font-weight: bold;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace div {
+        padding: 10px;
+        width: 180px;
+        height: 180px;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace {
+        position: absolute;
+      }
+
+      .leftFace {
+        -webkit-transform: skew(0deg, 30deg);
+        -moz-transform: skew(0deg, 30deg);
+        background-color: #ccc;
+      }
+
+      .rightFace {
+        -webkit-transform: skew(0deg, -30deg);
+        -moz-transform: skew(0deg, -30deg);
+        background-color: #ddd;
+        left: 200px;
+      }
+
+      .topFace div {
+        -webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+        -moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+        background-color: #eee;
+        font-size: 0.862em;
+      }
+
+      .topFace {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        top: -158px;
+        left: 100px;
+      }
+
+      .cube video {
+        left: -20px;
+        top: -20px;
+        position: relative;
+      }
+
+      .cube div.rightFace video {
+        left: -301px;
+        top: -35px;
+        opacity: 0.9;
+      }
+
+      .cube div.leftFace video {
+        opacity: 0.7;
+        top: -35px;
+        left: -100px;
+      }
+
+      .cube div.rightFace,
+      .cube div.leftFace {
+        overflow: hidden;
+      }
+
+      .cube div.topFace.video div {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 jumbotron mb-3 team-heading">
+          <h1 class="text-center">My Team</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="team-area col-12 d-flex justify-content-center">
+          <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">bob</h2>
+        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 1</li>
+            <li class="list-group-item">Email: <a href="mailto:bob">bob</a></li>
+            <li class="list-group-item">Office number: 1</li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    -------------------------
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Manager</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>Office Number:</h1>
+          <h2>
+            ${data.office}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Engineer</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>GitHub:</h1>
+          <h3>
+            ${data.github}
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Intern</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>School:</h1>
+          <h3>
+            ${data.school}
+          </h3>
+        </div>
+      </div>
+    </div>
+    --------------------
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <style>
+      body {
+        font-family: Helvetica;
+      }
+
+      .cube {
+        position: absolute;
+        left: 50%;
+        /* top: 300px; */
+        margin-left: -200px;
+      }
+
+      .cube p {
+        line-height: 14px;
+        font-size: 12px;
+      }
+
+      .cube h2 {
+        font-weight: bold;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace div {
+        padding: 10px;
+        width: 180px;
+        height: 180px;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace {
+        position: absolute;
+      }
+
+      .leftFace {
+        -webkit-transform: skew(0deg, 30deg);
+        -moz-transform: skew(0deg, 30deg);
+        background-color: #ccc;
+      }
+
+      .rightFace {
+        -webkit-transform: skew(0deg, -30deg);
+        -moz-transform: skew(0deg, -30deg);
+        background-color: #ddd;
+        left: 200px;
+      }
+
+      .topFace div {
+        -webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+        -moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+        background-color: #eee;
+        font-size: 0.862em;
+      }
+
+      .topFace {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        top: -158px;
+        left: 100px;
+      }
+
+      .cube video {
+        left: -20px;
+        top: -20px;
+        position: relative;
+      }
+
+      .cube div.rightFace video {
+        left: -301px;
+        top: -35px;
+        opacity: 0.9;
+      }
+
+      .cube div.leftFace video {
+        opacity: 0.7;
+        top: -35px;
+        left: -100px;
+      }
+
+      .cube div.rightFace,
+      .cube div.leftFace {
+        overflow: hidden;
+      }
+
+      .cube div.topFace.video div {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 jumbotron mb-3 team-heading">
+          <h1 class="text-center">My Team</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="team-area col-12 d-flex justify-content-center">
+          <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">bob</h2>
+        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 1</li>
+            <li class="list-group-item">Email: <a href="mailto:bob">bob</a></li>
+            <li class="list-group-item">Office number: 1</li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    -------------------------
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Manager</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>Office Number:</h1>
+          <h2>
+            ${data.office}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Engineer</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>GitHub:</h1>
+          <h3>
+            ${data.github}
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Intern</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>School:</h1>
+          <h3>
+            ${data.school}
+          </h3>
+        </div>
+      </div>
+    </div>
+    --------------------
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <style>
+      body {
+        font-family: Helvetica;
+      }
+
+      .cube {
+        position: absolute;
+        left: 50%;
+        /* top: 300px; */
+        margin-left: -200px;
+      }
+
+      .cube p {
+        line-height: 14px;
+        font-size: 12px;
+      }
+
+      .cube h2 {
+        font-weight: bold;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace div {
+        padding: 10px;
+        width: 180px;
+        height: 180px;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace {
+        position: absolute;
+      }
+
+      .leftFace {
+        -webkit-transform: skew(0deg, 30deg);
+        -moz-transform: skew(0deg, 30deg);
+        background-color: #ccc;
+      }
+
+      .rightFace {
+        -webkit-transform: skew(0deg, -30deg);
+        -moz-transform: skew(0deg, -30deg);
+        background-color: #ddd;
+        left: 200px;
+      }
+
+      .topFace div {
+        -webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+        -moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+        background-color: #eee;
+        font-size: 0.862em;
+      }
+
+      .topFace {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        top: -158px;
+        left: 100px;
+      }
+
+      .cube video {
+        left: -20px;
+        top: -20px;
+        position: relative;
+      }
+
+      .cube div.rightFace video {
+        left: -301px;
+        top: -35px;
+        opacity: 0.9;
+      }
+
+      .cube div.leftFace video {
+        opacity: 0.7;
+        top: -35px;
+        left: -100px;
+      }
+
+      .cube div.rightFace,
+      .cube div.leftFace {
+        overflow: hidden;
+      }
+
+      .cube div.topFace.video div {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 jumbotron mb-3 team-heading">
+          <h1 class="text-center">My Team</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="team-area col-12 d-flex justify-content-center">
+          <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">bob</h2>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 1</li>
+            <li class="list-group-item">Email: <a href="mailto:bob">bob</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/1" target="_blank" rel="noopener noreferrer">1</a></li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    -------------------------
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Manager</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>Office Number:</h1>
+          <h2>
+            ${data.office}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Engineer</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>GitHub:</h1>
+          <h3>
+            ${data.github}
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Intern</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>School:</h1>
+          <h3>
+            ${data.school}
+          </h3>
+        </div>
+      </div>
+    </div>
+    --------------------
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <style>
+      body {
+        font-family: Helvetica;
+      }
+
+      .cube {
+        position: absolute;
+        left: 50%;
+        /* top: 300px; */
+        margin-left: -200px;
+      }
+
+      .cube p {
+        line-height: 14px;
+        font-size: 12px;
+      }
+
+      .cube h2 {
+        font-weight: bold;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace div {
+        padding: 10px;
+        width: 180px;
+        height: 180px;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace {
+        position: absolute;
+      }
+
+      .leftFace {
+        -webkit-transform: skew(0deg, 30deg);
+        -moz-transform: skew(0deg, 30deg);
+        background-color: #ccc;
+      }
+
+      .rightFace {
+        -webkit-transform: skew(0deg, -30deg);
+        -moz-transform: skew(0deg, -30deg);
+        background-color: #ddd;
+        left: 200px;
+      }
+
+      .topFace div {
+        -webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+        -moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+        background-color: #eee;
+        font-size: 0.862em;
+      }
+
+      .topFace {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        top: -158px;
+        left: 100px;
+      }
+
+      .cube video {
+        left: -20px;
+        top: -20px;
+        position: relative;
+      }
+
+      .cube div.rightFace video {
+        left: -301px;
+        top: -35px;
+        opacity: 0.9;
+      }
+
+      .cube div.leftFace video {
+        opacity: 0.7;
+        top: -35px;
+        left: -100px;
+      }
+
+      .cube div.rightFace,
+      .cube div.leftFace {
+        overflow: hidden;
+      }
+
+      .cube div.topFace.video div {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 jumbotron mb-3 team-heading">
+          <h1 class="text-center">My Team</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="team-area col-12 d-flex justify-content-center">
+          <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">bob</h2>
+        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 1</li>
+            <li class="list-group-item">Email: <a href="mailto:bob">bob</a></li>
+            <li class="list-group-item">Office number: 2</li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    -------------------------
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Manager</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>Office Number:</h1>
+          <h2>
+            ${data.office}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Engineer</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>GitHub:</h1>
+          <h3>
+            ${data.github}
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Intern</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>School:</h1>
+          <h3>
+            ${data.school}
+          </h3>
+        </div>
+      </div>
+    </div>
+    --------------------
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <style>
+      body {
+        font-family: Helvetica;
+      }
+
+      .cube {
+        position: absolute;
+        left: 50%;
+        /* top: 300px; */
+        margin-left: -200px;
+      }
+
+      .cube p {
+        line-height: 14px;
+        font-size: 12px;
+      }
+
+      .cube h2 {
+        font-weight: bold;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace div {
+        padding: 10px;
+        width: 180px;
+        height: 180px;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace {
+        position: absolute;
+      }
+
+      .leftFace {
+        -webkit-transform: skew(0deg, 30deg);
+        -moz-transform: skew(0deg, 30deg);
+        background-color: #ccc;
+      }
+
+      .rightFace {
+        -webkit-transform: skew(0deg, -30deg);
+        -moz-transform: skew(0deg, -30deg);
+        background-color: #ddd;
+        left: 200px;
+      }
+
+      .topFace div {
+        -webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+        -moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+        background-color: #eee;
+        font-size: 0.862em;
+      }
+
+      .topFace {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        top: -158px;
+        left: 100px;
+      }
+
+      .cube video {
+        left: -20px;
+        top: -20px;
+        position: relative;
+      }
+
+      .cube div.rightFace video {
+        left: -301px;
+        top: -35px;
+        opacity: 0.9;
+      }
+
+      .cube div.leftFace video {
+        opacity: 0.7;
+        top: -35px;
+        left: -100px;
+      }
+
+      .cube div.rightFace,
+      .cube div.leftFace {
+        overflow: hidden;
+      }
+
+      .cube div.topFace.video div {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 jumbotron mb-3 team-heading">
+          <h1 class="text-center">My Team</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="team-area col-12 d-flex justify-content-center">
+          <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">lala</h2>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: lala</li>
+            <li class="list-group-item">Email: <a href="mailto:lala">lala</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/lala" target="_blank" rel="noopener noreferrer">lala</a></li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    -------------------------
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Manager</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>Office Number:</h1>
+          <h2>
+            ${data.office}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Engineer</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>GitHub:</h1>
+          <h3>
+            ${data.github}
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Intern</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>School:</h1>
+          <h3>
+            ${data.school}
+          </h3>
+        </div>
+      </div>
+    </div>
+    --------------------
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <style>
+      body {
+        font-family: Helvetica;
+      }
+
+      .cube {
+        position: absolute;
+        left: 50%;
+        /* top: 300px; */
+        margin-left: -200px;
+      }
+
+      .cube p {
+        line-height: 14px;
+        font-size: 12px;
+      }
+
+      .cube h2 {
+        font-weight: bold;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace div {
+        padding: 10px;
+        width: 180px;
+        height: 180px;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace {
+        position: absolute;
+      }
+
+      .leftFace {
+        -webkit-transform: skew(0deg, 30deg);
+        -moz-transform: skew(0deg, 30deg);
+        background-color: #ccc;
+      }
+
+      .rightFace {
+        -webkit-transform: skew(0deg, -30deg);
+        -moz-transform: skew(0deg, -30deg);
+        background-color: #ddd;
+        left: 200px;
+      }
+
+      .topFace div {
+        -webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+        -moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+        background-color: #eee;
+        font-size: 0.862em;
+      }
+
+      .topFace {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        top: -158px;
+        left: 100px;
+      }
+
+      .cube video {
+        left: -20px;
+        top: -20px;
+        position: relative;
+      }
+
+      .cube div.rightFace video {
+        left: -301px;
+        top: -35px;
+        opacity: 0.9;
+      }
+
+      .cube div.leftFace video {
+        opacity: 0.7;
+        top: -35px;
+        left: -100px;
+      }
+
+      .cube div.rightFace,
+      .cube div.leftFace {
+        overflow: hidden;
+      }
+
+      .cube div.topFace.video div {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 jumbotron mb-3 team-heading">
+          <h1 class="text-center">My Team</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="team-area col-12 d-flex justify-content-center">
+          <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">bob</h2>
+        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 1</li>
+            <li class="list-group-item">Email: <a href="mailto:bob">bob</a></li>
+            <li class="list-group-item">Office number: 1</li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    -------------------------
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Manager</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>Office Number:</h1>
+          <h2>
+            ${data.office}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Engineer</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>GitHub:</h1>
+          <h3>
+            ${data.github}
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Intern</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>School:</h1>
+          <h3>
+            ${data.school}
+          </h3>
+        </div>
+      </div>
+    </div>
+    --------------------
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <style>
+      body {
+        font-family: Helvetica;
+      }
+
+      .cube {
+        position: absolute;
+        left: 50%;
+        /* top: 300px; */
+        margin-left: -200px;
+      }
+
+      .cube p {
+        line-height: 14px;
+        font-size: 12px;
+      }
+
+      .cube h2 {
+        font-weight: bold;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace div {
+        padding: 10px;
+        width: 180px;
+        height: 180px;
+      }
+
+      .rightFace,
+      .leftFace,
+      .topFace {
+        position: absolute;
+      }
+
+      .leftFace {
+        -webkit-transform: skew(0deg, 30deg);
+        -moz-transform: skew(0deg, 30deg);
+        background-color: #ccc;
+      }
+
+      .rightFace {
+        -webkit-transform: skew(0deg, -30deg);
+        -moz-transform: skew(0deg, -30deg);
+        background-color: #ddd;
+        left: 200px;
+      }
+
+      .topFace div {
+        -webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+        -moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+        background-color: #eee;
+        font-size: 0.862em;
+      }
+
+      .topFace {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        top: -158px;
+        left: 100px;
+      }
+
+      .cube video {
+        left: -20px;
+        top: -20px;
+        position: relative;
+      }
+
+      .cube div.rightFace video {
+        left: -301px;
+        top: -35px;
+        opacity: 0.9;
+      }
+
+      .cube div.leftFace video {
+        opacity: 0.7;
+        top: -35px;
+        left: -100px;
+      }
+
+      .cube div.rightFace,
+      .cube div.leftFace {
+        overflow: hidden;
+      }
+
+      .cube div.topFace.video div {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 jumbotron mb-3 team-heading">
+          <h1 class="text-center">My Team</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="team-area col-12 d-flex justify-content-center">
+          <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">lala</h2>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: lala</li>
+            <li class="list-group-item">Email: <a href="mailto:lalal">lalal</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/lal" target="_blank" rel="noopener noreferrer">lal</a></li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    -------------------------
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Manager</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>Office Number:</h1>
+          <h2>
+            ${data.office}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Engineer</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>GitHub:</h1>
+          <h3>
+            ${data.github}
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="experiment">
+      <div class="cube">
+        <div class="topFace">
+          <div>
+            <h1>${data.name}</h1>
+            <h3>Intern</h3>
+            <h3>ID: ${data.id}</h3>
+          </div>
+        </div>
+        <div class="leftFace">
+          <h1>Email:</h1>
+          <h3><a href="mailto:${data.email}"></a>${data.email}</h3>
+        </div>
+        <div class="rightFace">
+          <h1>School:</h1>
+          <h3>
+            ${data.school}
+          </h3>
+        </div>
+      </div>
+    </div>
+    --------------------
+  </body>
+</html>

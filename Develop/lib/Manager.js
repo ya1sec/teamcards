@@ -5,23 +5,23 @@ function Manager(name, id, email, officeNumber) {
   this.email = email;
   this.officeNumber = officeNumber;
   this.getName = () => {
-    console.log(this.name);
+    // console.log(this.name);
     return this.name;
   };
   this.getId = () => {
-    console.log(this.id);
+    // console.log(this.id);
     return this.id;
   };
   this.getEmail = () => {
-    console.log(this.email);
+    // console.log(this.email);
     return this.email;
   };
   this.getRole = () => {
-    console.log("Manager");
+    // console.log("Manager");
     return "Manager";
   };
   this.getOfficeNumber = () => {
-    console.log(this.officeNumber);
+    // console.log(this.officeNumber);
     return this.officeNumber;
   };
 }
