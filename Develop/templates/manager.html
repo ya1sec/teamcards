@@ -1,13 +1,25 @@
-<div class="card employee-card">
-    <div class="card-header">
-        <h2 class="card-title">{{ name }}</h2>
-        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }}</h3>
+<h1 class="team">TEAM</h1>
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+
+<div id="experiment">
+  <div class="cube">
+    <div class="topFace manager">
+      <div>
+        <h1>{{ name }}</h1>
+        <h3 class="manager-text">MANAGER</h3>
+        <h3>ID: {{ id }}</h3>
+      </div>
     </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item">ID: {{ id }}</li>
-            <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
-            <li class="list-group-item">Office number: {{ officeNumber }}</li>
-        </ul>
+    <div class="leftFace">
+      <h1>Email:</h1>
+      <h3><a href="mailto:{{ email }}">{{ email }}</a></h3>
     </div>
+    <div class="rightFace">
+      <h1>Office Number:</h1>
+      <h2>
+        {{ officeNumber }}
+      </h2>
+    </div>
+  </div>
 </div>
